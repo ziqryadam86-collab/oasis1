@@ -22,7 +22,7 @@ link = get_link()
 if link:
     # Buat format playlist M3U
     m3u_text = f"#EXTM3U\n#EXT-X-STREAM-INF:BANDWIDTH=500000,RESOLUTION=1920x1080\n{link}"
-    with open("playlist.m3u", "w") as f:
+    with open("index.m3u8", "w") as f:
         f.write(m3u_text)
     print("Berjaya update link!")
 else:
