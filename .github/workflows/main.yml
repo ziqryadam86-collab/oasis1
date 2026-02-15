@@ -2,7 +2,7 @@ name: Update M3U8 Link
 
 on:
   schedule:
-    - cron: '0 * * * *' # Auto-update setiap jam
+    - cron: '0 * * * *' # Berjalan automatik setiap jam
   workflow_dispatch:      # Butang manual update
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add playlist.m3u
-          git commit -m "Auto update playlist" || exit 0
+          git add index.m3u8
+          git commit -m "Auto update index.m3u8" || exit 0
           git push
           
